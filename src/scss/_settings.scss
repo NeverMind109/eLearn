@@ -183,7 +183,7 @@ a {
       border: 1px solid var(--color-black);
     }
   }
-  &--hollow {
+  &--hollow-accent {
     color: var(--color-accent);
     letter-spacing: 0.02em;
     border: 1px solid var(--color-accent);
@@ -194,6 +194,20 @@ a {
     &:active {
       background-color: var(--color-accent);
       color: var(--black);
+    }
+  }
+  &--hollow-white {
+    color: var(--color-light);
+    letter-spacing: 0.02em;
+    border: 1px solid var(--color-light);
+    &:hover {
+      border: 1px solid var(--color-accent);
+      background-color: var(--color-accent);
+    }
+    &:active {
+      background-color: var(--color-light);
+      color: var(--color-accent);
+      border: 1px solid var(--color-accent);
     }
   }
 }
