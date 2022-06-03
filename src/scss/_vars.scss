@@ -1,0 +1,21 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Poppins", sans-serif;
+  --content-width: 1564px;
+  --header-width: 1694px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --header-container-width: calc(
+    var(--header-width) + (var(--container-offset) * 2)
+  );
+
+  // colors
+  --color-light: #fff;
+  --color-black: #000;
+  --color-text: #696984;
+  --color-accent: #ea5972;
+  --color-comet: #5f5f7e;
+  --color-clay: #252641;
+}

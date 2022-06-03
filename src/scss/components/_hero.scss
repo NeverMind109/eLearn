@@ -1,0 +1,183 @@
+.hero {
+  position: relative;
+  background-color: #fae9ec;
+  border-bottom-left-radius: 28%;
+  border-bottom-right-radius: 28%;
+  &__wrapper {
+    display: flex;
+    padding: 160px 0 0;
+  }
+  &__content {
+    padding-top: 145px;
+    padding-left: 40px;
+  }
+  &__title {
+    max-width: 865px;
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 98px;
+    color: #1e2a39;
+    margin-bottom: 26px;
+    span {
+      position: relative;
+      padding-left: 40px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 14px;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/highlight.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  &__descr {
+    max-width: 523px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 45px;
+  }
+  &__btns {
+    @include flex-v-center;
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 22px 38px;
+    margin-right: 40px;
+  }
+  &__watch {
+    @include flex-v-center;
+
+    &:hover {
+      .hero__watch-text {
+        color: var(--color-black);
+      }
+    }
+  }
+  &__play {
+    @include flex-all-center;
+
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-light);
+    border-radius: 100%;
+    margin-right: 32px;
+  }
+  &__play-btn {
+    margin-left: 10px;
+    height: 32px;
+    object-fit: unset;
+  }
+  &__watch-text {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-clay);
+    transition: color 0.3s;
+  }
+  &__student {
+    position: relative;
+  }
+  &__img {
+    height: 955px;
+    transform: rotate(-7.16deg);
+    border-bottom-right-radius: 19%;
+  }
+  &__info {
+    @include flex-v-center;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px 28px;
+  }
+  &__calendar {
+    position: absolute;
+    top: 25%;
+    left: -9%;
+    min-width: 300px;
+  }
+  &__teacher {
+    position: absolute;
+    bottom: 19%;
+    left: -11%;
+    min-width: 390px;
+    align-items: flex-start;
+    .hero__info-image {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/green-point.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  &__message {
+    position: absolute;
+    bottom: 41%;
+    right: -5%;
+    min-width: 370px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      right: 16px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &__diagram {
+    position: absolute;
+    top: 17%;
+    right: 8%;
+  }
+  &__info-image {
+    margin-right: 25px;
+  }
+  &__info-img {
+    height: 100%;
+  }
+  &__info-title {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: #595959;
+  }
+  &__info-text {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: #545567;
+  }
+  &__info-footer {
+    width: 100%;
+    margin-top: 19px;
+  }
+  &__info-btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    padding: 12px 48px 11px;
+  }
+}
