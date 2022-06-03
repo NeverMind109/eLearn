@@ -1,0 +1,39 @@
+.partners {
+  background-color: var(--color-light);
+  padding: 100px 0 130px;
+  &__wrapper {
+    text-align: center;
+  }
+  &__descr {
+    display: inline-block;
+    font-size: 35px;
+    line-height: 56px;
+    letter-spacing: 0.03em;
+    color: #424246;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    padding: 0 100px;
+  }
+  &__item {
+    height: 68px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #ababab;
+      object-fit: cover;
+      transition: fill 0.3s;
+    }
+    &:not(:last-child) {
+      margin-right: 75px;
+    }
+  }
+  &__link {
+    &:hover {
+      svg {
+        fill: var(--color-black);
+      }
+    }
+  }
+}

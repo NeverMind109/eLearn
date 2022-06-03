@@ -80,8 +80,11 @@
     color: var(--color-clay);
     transition: color 0.3s;
   }
-  &__student {
+  &__images {
     position: relative;
+  }
+  &__student {
+    overflow: hidden;
   }
   &__img {
     height: 955px;
