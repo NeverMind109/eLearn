@@ -1,11 +1,9 @@
 .testimonials {
   background-color: var(--color-light);
-  padding-bottom: 150px;
+  padding-bottom: 120px;
   &__wrapper {
     display: flex;
     justify-content: space-between;
-  }
-  &__content {
   }
   &__name {
     position: relative;
@@ -137,8 +135,6 @@
     line-height: 43px;
     color: #484848;
   }
-  &__more {
-  }
   &__rate {
     margin-bottom: 12px;
     &:not(:last-child) {
@@ -165,7 +161,5 @@
     background: var(--color-light);
     box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
     border-radius: 100px;
-  }
-  &__next-img {
   }
 }
