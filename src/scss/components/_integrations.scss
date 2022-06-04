@@ -1,0 +1,68 @@
+.integrations {
+  background-color: var(--color-light);
+  padding-bottom: 165px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 50%;
+
+    &:nth-child(odd) {
+      @include flex-all-center;
+    }
+    &:nth-child(even) {
+      padding-top: 87px;
+      padding-right: 44px;
+    }
+  }
+  &__content {
+    margin-right: 50px;
+  }
+  &__name {
+    position: relative;
+    display: inline-block;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding-left: 110px;
+    margin-bottom: 33px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 1px;
+      background-color: var(--color-accent);
+    }
+  }
+  &__title {
+    max-width: 600px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 58px;
+    color: var(--color-black);
+    margin-bottom: 30px;
+  }
+  &__descr {
+    max-width: 690px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 44px;
+  }
+  &__link {
+    display: inline-block;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 40px;
+    padding: 20px 42px;
+  }
+}

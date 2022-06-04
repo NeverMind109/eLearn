@@ -31,9 +31,11 @@
   }
   &__item {
     position: relative;
+    font-size: 0;
     &:hover {
       .more__item-overflow {
         display: flex;
+        transition: all 0.5s;
       }
     }
   }

@@ -129,6 +129,10 @@ a {
   position: relative;
 }
 
+.logo {
+  font-size: 0;
+}
+
 .section-title {
   font-weight: 600;
   font-size: 44px;
@@ -192,7 +196,7 @@ a {
     }
     &:active {
       background-color: var(--color-accent);
-      color: var(--black);
+      color: var(--color-black);
     }
   }
   &--hollow-white {
@@ -209,4 +213,13 @@ a {
       border: 1px solid var(--color-accent);
     }
   }
+}
+
+.right {
+  order: 1;
+  margin-left: 20px;
+}
+.left {
+  order: -1;
+  margin-right: 20px;
 }
