@@ -51,11 +51,11 @@
     padding: 22px 106px 22px 38px;
     &:hover {
       border: 1px solid var(--color-accent);
-      color: var(--color-accent);
+      color: var(--color-black);
     }
     &:active {
       background-color: transparent;
-      color: var(--color-accent);
+      color: var(--color-black);
     }
   }
   &__link-arrow {

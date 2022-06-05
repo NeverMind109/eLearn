@@ -1,0 +1,118 @@
+.footer {
+  background-color: var(--color-black);
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 74px 0 40px;
+  }
+  &__wrapper {
+    @include flex-v-center;
+
+    margin-bottom: 95px;
+  }
+  &__logo {
+    position: relative;
+    display: inline-block;
+    padding-right: 91px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50px;
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.46);
+    }
+  }
+  &__descr {
+    max-width: 160px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.04em;
+    color: var(--color-light);
+  }
+  &__newsletter {
+    margin-bottom: 95px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #b2b3cf;
+    margin-bottom: 20px;
+  }
+  &__form {
+    @include flex-v-center;
+  }
+  &__input {
+    width: 400px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #9e9fae;
+    border: 1px solid #aaaaba;
+    background-color: transparent;
+    border-radius: 80px;
+    padding: 0 30px;
+    margin-right: 20px;
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: #9e9fae;
+    }
+  }
+  &__btn {
+    padding: 14px 34px 13px;
+    border-radius: 60px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+  &__item {
+    position: relative;
+    margin-right: 40px;
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        display: block;
+        height: 17px;
+        width: 1px;
+        background-color: #626381;
+      }
+    }
+  }
+  &__link {
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.04em;
+    color: #b2b3cf;
+    transition: color 0.3s;
+    &:hover {
+      color: var(--color-light);
+    }
+  }
+  &__copy {
+    display: inline-block;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #b2b3cf;
+  }
+}

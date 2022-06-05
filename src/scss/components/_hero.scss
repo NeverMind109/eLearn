@@ -1,8 +1,9 @@
 .hero {
   position: relative;
   background-color: #fae9ec;
-  border-bottom-left-radius: 28%;
-  border-bottom-right-radius: 28%;
+  min-height: 1120px;
+  border-bottom-left-radius: 100% 200px;
+  border-bottom-right-radius: 100% 200px;
   &__wrapper {
     display: flex;
     padding: 160px 0 0;
@@ -85,11 +86,11 @@
   }
   &__student {
     overflow: hidden;
+    font-size: 0;
   }
   &__img {
     height: 955px;
-    transform: rotate(-7.16deg);
-    border-bottom-right-radius: 19%;
+    transform: rotate(-6.16deg);
   }
   &__info {
     @include flex-v-center;

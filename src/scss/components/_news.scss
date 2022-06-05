@@ -1,5 +1,5 @@
 .news {
-  padding-bottom: 160px;
+  padding-bottom: 155px;
   background-color: var(--color-light);
   &__title {
     font-family: "Nunito Sans", sans-serif;
@@ -77,6 +77,11 @@
 }
 .news-small {
   max-width: 800px;
+  &:hover {
+    .news-small__title {
+      color: var(--color-accent);
+    }
+  }
   &__article {
     display: flex;
   }
@@ -110,6 +115,7 @@
     line-height: 40px;
     color: var(--color-clay);
     margin-bottom: 20px;
+    transition: color 0.3s;
   }
   &__descr {
     font-size: 20px;
