@@ -26,6 +26,9 @@
   &__item {
     margin-right: 80px;
 
+    @include desktop {
+      margin-right: 30px;
+    }
     @include tablet {
       margin-right: 0;
       margin-bottom: 20px;
@@ -36,6 +39,9 @@
     &:not(:last-child) {
       margin-right: 34px;
 
+      @include desktop {
+        margin-right: 30px;
+      }
       @include tablet {
         margin-right: 0;
       }

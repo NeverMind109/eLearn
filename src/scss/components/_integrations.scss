@@ -4,24 +4,67 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include desktop {
+      @include flex-all-center;
+
+      flex-direction: column;
+    }
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include desktop {
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
   &__item {
     width: 50%;
-
     &:nth-child(odd) {
       @include flex-all-center;
+
+      @include desktop {
+        align-items: inherit;
+        justify-content: initial;
+      }
+      @include small-tablet {
+        @include flex-all-center;
+      }
     }
     &:nth-child(even) {
       padding-top: 87px;
       padding-right: 44px;
+
+      @include desktop {
+        padding: 0;
+      }
+    }
+
+    @include desktop {
+      width: auto;
+    }
+    @include small-tablet {
+      @include flex-all-center;
+
+      width: 50%;
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      width: 100%;
     }
   }
+  &__img {
+    width: 110px;
+    height: 100px;
+  }
   &__content {
-    margin-right: 50px;
+    @include desktop {
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
   &__name {
     position: relative;
@@ -43,6 +86,15 @@
       width: 80px;
       height: 1px;
       background-color: var(--color-accent);
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding: 0;
+      margin-bottom: 20px;
     }
   }
   &__title {
@@ -53,16 +105,51 @@
     line-height: 58px;
     color: var(--color-black);
     margin-bottom: 30px;
+
+    @include desktop {
+      max-width: none;
+    }
+    @include small-tablet {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @include mobile {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 25px;
+    }
   }
   &__descr {
     max-width: 690px;
     font-family: "Nunito Sans", sans-serif;
     margin-bottom: 44px;
+
+    @include desktop {
+      max-width: none;
+    }
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
   &__link {
     display: inline-block;
     font-family: "Nunito Sans", sans-serif;
     line-height: 40px;
     padding: 20px 42px;
+
+    @include mobile {
+      line-height: 30px;
+      padding: 18px 25px;
+    }
+  }
+
+  @include small-desktop {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 75px;
+  }
+  @include mobile {
+    padding-bottom: 50px;
   }
 }

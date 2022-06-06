@@ -4,6 +4,18 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include desktop {
+      @include flex-all-center;
+
+      flex-direction: column;
+    }
+  }
+  &__content {
+    @include desktop {
+      text-align: center;
+      margin-bottom: 30px;
+    }
   }
   &__name {
     position: relative;
@@ -25,6 +37,15 @@
       width: 80px;
       height: 1px;
       background-color: var(--color-accent);
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding: 0;
+      margin-bottom: 20px;
     }
   }
   &__title {
@@ -35,6 +56,15 @@
     line-height: 82px;
     color: var(--color-black);
     margin-bottom: 30px;
+
+    @include desktop {
+      max-width: none;
+    }
+    @include mobile {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 25px;
+    }
   }
   &__descr {
     max-width: 610px;
@@ -43,6 +73,19 @@
     letter-spacing: 0.02em;
     color: var(--color-text);
     margin-bottom: 30px;
+
+    @include desktop {
+      max-width: none;
+    }
+    @include small-tablet {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    @include mobile {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
   }
   &__link {
     position: relative;
@@ -57,6 +100,16 @@
       background-color: transparent;
       color: var(--color-black);
     }
+    img {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      line-height: 24px;
+      padding: 18px 25px;
+    }
   }
   &__link-arrow {
     position: absolute;
@@ -68,6 +121,12 @@
     max-width: 750px;
     overflow: hidden;
     padding-bottom: 150px;
+
+    @include small-tablet {
+      max-width: none;
+      width: 100%;
+      padding-bottom: 0;
+    }
   }
   &__image {
     font-size: 0;
@@ -75,6 +134,22 @@
     img {
       background-color: #c4c4c4;
       border-radius: 20px;
+
+      @include small-tablet {
+        height: 500px;
+      }
+      @include mobile {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    @include desktop {
+      text-align: center;
+      padding-right: 0;
+    }
+    @include small-tablet {
+      margin-bottom: 25px;
     }
   }
   &__review {
@@ -89,7 +164,6 @@
     padding: 41px 42px 30px 87px;
     margin-left: 45px;
     margin-right: 40px;
-
     &::before {
       content: "";
       position: absolute;
@@ -100,6 +174,14 @@
       background-color: #cd356f;
       box-shadow: 2px 4px 60px rgba(41, 44, 124, 0.1);
       border-radius: 20px 0px 0px 20px;
+    }
+
+    @include small-tablet {
+      position: relative;
+      bottom: 0;
+      max-width: none;
+      padding: 10px 10px 10px 35px;
+      margin: 0;
     }
   }
   &__quote {
@@ -121,12 +203,30 @@
       background-color: #bdbdd1;
       height: 100%;
       width: 1px;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+    @include small-tablet {
+      max-width: none;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include mobile {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
   &__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__author {
     font-family: "Nunito Sans", sans-serif;
@@ -134,11 +234,21 @@
     font-size: 24px;
     line-height: 43px;
     color: #484848;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
   &__rate {
-    margin-bottom: 12px;
-    &:not(:last-child) {
-      margin-right: 5px;
+    margin: 0 auto 12px;
+    img {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
     }
   }
   &__other {
@@ -161,5 +271,26 @@
     background: var(--color-light);
     box-shadow: 0px 4px 60px rgba(41, 44, 124, 0.15);
     border-radius: 100px;
+
+    @include desktop {
+      top: 30%;
+      right: 7%;
+    }
+    @include small-tablet {
+      top: 25%;
+      right: 2%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include small-desktop {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 75px;
+  }
+  @include mobile {
+    padding-bottom: 50px;
   }
 }

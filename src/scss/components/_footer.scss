@@ -5,11 +5,20 @@
     flex-direction: column;
     align-items: center;
     padding: 74px 0 40px;
+
+    @include mobile {
+      padding: 50px 0 25px;
+    }
   }
   &__wrapper {
     @include flex-v-center;
 
     margin-bottom: 95px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
   }
   &__logo {
     position: relative;
@@ -24,6 +33,15 @@
       height: 100%;
       width: 1px;
       background-color: rgba(255, 255, 255, 0.46);
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      padding-right: 0;
+      margin-bottom: 15px;
     }
   }
   &__descr {
@@ -34,9 +52,19 @@
     line-height: 33px;
     letter-spacing: 0.04em;
     color: var(--color-light);
+
+    @include mobile {
+      max-width: none;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   &__newsletter {
     margin-bottom: 95px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
   &__title {
     font-weight: 500;
@@ -46,9 +74,18 @@
     letter-spacing: 0.04em;
     color: #b2b3cf;
     margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 25px;
+      line-height: 35px;
+    }
   }
   &__form {
     @include flex-v-center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
   &__input {
     width: 400px;
@@ -69,16 +106,33 @@
       letter-spacing: 0.04em;
       color: #9e9fae;
     }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
   &__btn {
     padding: 14px 34px 13px;
     border-radius: 60px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
   &__list {
     display: flex;
     justify-content: center;
     padding-left: 40px;
     margin-bottom: 20px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+    }
   }
   &__item {
     position: relative;
@@ -94,7 +148,15 @@
         height: 17px;
         width: 1px;
         background-color: #626381;
+
+        @include mobile {
+          display: none;
+        }
       }
+    }
+
+    @include mobile {
+      margin-right: 0;
     }
   }
   &__link {
@@ -106,6 +168,11 @@
     &:hover {
       color: var(--color-light);
     }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   &__copy {
     display: inline-block;
@@ -114,5 +181,10 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: #b2b3cf;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 }

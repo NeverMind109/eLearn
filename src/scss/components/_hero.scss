@@ -7,10 +7,26 @@
   &__wrapper {
     display: flex;
     padding: 160px 0 0;
+
+    @include small-desktop {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablet {
+      padding: 160px 0 30px;
+    }
+    @include small-tablet {
+      padding: 130px 0 30px;
+    }
   }
   &__content {
     padding-top: 145px;
     padding-left: 40px;
+
+    @include small-desktop {
+      padding-top: 0;
+      padding-left: 0;
+    }
   }
   &__title {
     max-width: 865px;
@@ -33,16 +49,53 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include mobile {
+          top: 12px;
+          left: 35px;
+          width: 77%;
+          height: 75%;
+        }
       }
+
+      @include mobile {
+        display: block;
+        padding: 12px 3px 19px;
+      }
+    }
+
+    @include tablet {
+      max-width: none;
+      font-size: 50px;
+      line-height: 65px;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 35px;
+      line-height: 45px;
+      margin-bottom: 15px;
     }
   }
   &__descr {
     max-width: 523px;
     font-family: "Nunito Sans", sans-serif;
     margin-bottom: 45px;
+
+    @include tablet {
+      text-align: center;
+      margin: 0 auto 30px;
+    }
   }
   &__btns {
     @include flex-v-center;
+
+    @include small-desktop {
+      justify-content: center;
+    }
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__btn {
     font-weight: 600;
@@ -50,6 +103,19 @@
     line-height: 36px;
     padding: 22px 38px;
     margin-right: 40px;
+
+    @include small-desktop {
+      font-size: 22px;
+      line-height: 30px;
+      margin-right: 0;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 18px 24px;
+    }
   }
   &__watch {
     @include flex-v-center;
@@ -63,16 +129,29 @@
   &__play {
     @include flex-all-center;
 
+    flex-shrink: 0;
     width: 80px;
     height: 80px;
     background-color: var(--color-light);
     border-radius: 100%;
     margin-right: 32px;
+
+    @include mobile {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+    }
   }
   &__play-btn {
     margin-left: 10px;
     height: 32px;
     object-fit: unset;
+
+    @include mobile {
+      margin-left: 8px;
+      width: 27px;
+      height: 27px;
+    }
   }
   &__watch-text {
     display: inline-block;
@@ -80,17 +159,35 @@
     line-height: 36px;
     color: var(--color-clay);
     transition: color 0.3s;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
   &__images {
     position: relative;
+
+    @include tablet {
+      display: none;
+    }
   }
   &__student {
     overflow: hidden;
     font-size: 0;
+
+    @include small-desktop {
+      text-align: center;
+    }
   }
   &__img {
     height: 955px;
     transform: rotate(-6.16deg);
+
+    @include big-desktop {
+      height: 850px;
+      transform: rotate(0);
+    }
   }
   &__info {
     @include flex-v-center;
@@ -105,6 +202,12 @@
     top: 25%;
     left: -9%;
     min-width: 300px;
+
+    @include big-desktop {
+      top: 50%;
+      left: auto;
+      right: 10%;
+    }
   }
   &__teacher {
     position: absolute;
@@ -127,11 +230,15 @@
         background-size: cover;
       }
     }
+
+    @include big-desktop {
+      display: none;
+    }
   }
   &__message {
     position: absolute;
     bottom: 41%;
-    right: -5%;
+    right: 0;
     min-width: 370px;
     &::after {
       content: "";
@@ -145,11 +252,21 @@
       background-size: cover;
       background-position: center;
     }
+
+    @include big-desktop {
+      bottom: 20%;
+      left: 5%;
+      right: auto;
+    }
   }
   &__diagram {
     position: absolute;
     top: 17%;
     right: 8%;
+
+    @include big-desktop {
+      display: none;
+    }
   }
   &__info-image {
     margin-right: 25px;
@@ -182,6 +299,18 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
-    padding: 12px 48px 11px;
+    color: var(--color-light);
+    border-radius: 80px;
+    padding: 13px 48px 12px;
+    background-color: var(--color-black);
+  }
+
+  @include big-desktop {
+    min-height: 990px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  @include tablet {
+    min-height: auto;
   }
 }

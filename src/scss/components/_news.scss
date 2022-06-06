@@ -9,14 +9,30 @@
     font-family: "Nunito Sans", sans-serif;
     text-align: center;
     margin: 0 auto 100px;
+
+    @include small-tablet {
+      margin: 0 auto 75px;
+    }
+    @include mobile {
+      margin: 0 auto 50px;
+    }
   }
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include desktop {
+      @include flex-all-center;
+
+      flex-direction: column;
+    }
   }
   &__single {
     display: block;
 
+    @include big-desktop {
+      margin-bottom: 30px;
+    }
     @include tablet {
       display: none;
     }
@@ -32,6 +48,16 @@
     @include tablet {
       display: block;
     }
+  }
+
+  @include small-desktop {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 75px;
+  }
+  @include mobile {
+    padding-bottom: 50px;
   }
 }
 .news-big {
@@ -52,6 +78,10 @@
     background-color: #dc5e74;
     border-radius: 80px;
     margin-bottom: 20px;
+
+    @include big-desktop {
+      margin: 0 auto 20px;
+    }
   }
   &__title {
     font-weight: 500;
@@ -74,6 +104,13 @@
     text-decoration-line: underline;
     color: #444444;
   }
+
+  @include big-desktop {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .news-small {
   max-width: 800px;
@@ -84,10 +121,23 @@
   }
   &__article {
     display: flex;
+    align-items: center;
+
+    @include big-desktop {
+      justify-content: center;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
   }
   &__image {
     position: relative;
     margin-right: 40px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   &__img {
     background-color: rgba(#171b41, 0.1);
@@ -108,6 +158,13 @@
   }
   &__content {
     max-width: 480px;
+
+    @include big-desktop {
+      max-width: 60%;
+    }
+    @include mobile {
+      max-width: none;
+    }
   }
   &__title {
     font-weight: 500;
@@ -116,11 +173,25 @@
     color: var(--color-clay);
     margin-bottom: 20px;
     transition: color 0.3s;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &__descr {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 0.02em;
     color: var(--color-text);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  @include big-desktop {
+    max-width: none;
   }
 }
