@@ -48,7 +48,7 @@
         background-image: url("../img/highlight.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
 
         @include mobile {
           top: 12px;
@@ -60,7 +60,7 @@
 
       @include mobile {
         display: block;
-        padding: 12px 3px 19px;
+        padding: 20px 3px 25px;
       }
     }
 
@@ -104,7 +104,7 @@
     padding: 22px 38px;
     margin-right: 40px;
 
-    @include small-desktop {
+    @include small-tablet {
       font-size: 22px;
       line-height: 30px;
       margin-right: 0;
