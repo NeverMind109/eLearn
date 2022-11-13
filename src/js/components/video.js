@@ -1,14 +1,16 @@
-const videoPlay = document.querySelectorAll(".video-play");
+const videoPlayBtn = document.querySelector(".video-play");
+const videoEl = document.querySelector(".our-system video");
 
-videoPlay.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    let video = e.currentTarget
-      .closest(".our-system__video")
-      .querySelector("video");
-    video.play();
-    e.currentTarget.style.display = "none";
-    setTimeout(() => {
-      video.volume = 0.5;
-    }, 1000);
-  });
-});
+videoPlayBtn.addEventListener("click", videoFunction);
+videoEl.addEventListener("click", videoFunction);
+
+function videoFunction() {
+  if (videoEl.paused) {
+    videoEl.play();
+    videoPlayBtn.style.display = "none";
+    videoEl.volume = 0.5;
+  } else {
+    videoEl.pause();
+    videoPlayBtn.style.display = "flex";
+  }
+}

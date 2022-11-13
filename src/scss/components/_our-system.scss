@@ -130,6 +130,7 @@
     height: 471px;
     border-radius: 20px;
     object-fit: cover;
+    cursor: pointer;
 
     @include big-desktop {
       width: 550px;

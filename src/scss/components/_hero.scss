@@ -13,10 +13,10 @@
       align-items: center;
     }
     @include tablet {
-      padding: 160px 0 30px;
+      padding: 200px 0 0;
     }
     @include small-tablet {
-      padding: 130px 0 30px;
+      padding: 150px 0 40px;
     }
   }
   &__content {
@@ -57,7 +57,9 @@
           height: 75%;
         }
       }
-
+      @include tablet {
+        padding-left: 25px;
+      }
       @include mobile {
         display: block;
         padding: 20px 3px 25px;
@@ -168,7 +170,7 @@
   &__images {
     position: relative;
 
-    @include tablet {
+    @include small-tablet {
       display: none;
     }
   }
@@ -196,6 +198,10 @@
     backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 20px 28px;
+
+    @include big-desktop {
+      padding: 17px 20px;
+    }
   }
   &__calendar {
     position: absolute;
@@ -254,9 +260,12 @@
     }
 
     @include big-desktop {
-      bottom: 20%;
-      left: 5%;
+      bottom: 6%;
+      left: -16%;
       right: auto;
+    }
+    @include small-desktop {
+      left: 5%;
     }
   }
   &__diagram {

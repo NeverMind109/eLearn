@@ -45,6 +45,7 @@
     box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.08);
     border-radius: 20px;
     padding: 0 55px 50px;
+    transition: box-shadow 0, 3s ease-in-out;
     &:not(:last-child) {
       margin-right: 20px;
 
@@ -61,6 +62,9 @@
     @include small-desktop {
       max-width: none;
       padding: 10px;
+    }
+    &:hover {
+      box-shadow: 0 20px 20px rgba(38, 45, 118, 0.08);
     }
   }
   &__image {

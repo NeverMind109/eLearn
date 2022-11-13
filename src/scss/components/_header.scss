@@ -9,6 +9,9 @@
     @include flex-all-sb;
   }
 
+  @include tablet {
+    padding: 35px 0 10px;
+  }
   @include small-tablet {
     padding: 25px 0 10px;
   }
